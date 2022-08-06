@@ -65,7 +65,7 @@ This is implemented mainly based on [Pytorch Geometric](https://github.com/rusty
   7. The class-wise temeperature hyperparameter, 𝜙: \
        Set [temp_phi] as one of [0.8, 1.2]
 
-We will update ReNode and GraphEN later.
+We will update ReNode and GraphENS later.
 
 ## Dependencies
 This code has been tested with 

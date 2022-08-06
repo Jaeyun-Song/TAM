@@ -16,7 +16,7 @@ def parse_args():
     parser.add_argument('--feat_dim', type=int, default=256,
                         help='Feature dimension')
     # Imbalance Loss
-    parser.add_argument('--loss_type', type=str, default='ce',
+    parser.add_argument('--loss_type', type=str, default='bs',
                         help='Loss type')
     # Method
     parser.add_argument('--tam', action='store_true',
