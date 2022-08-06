@@ -64,6 +64,21 @@ def compute_tam(output, edge_index, label, train_mask, aggregator, class_num_lis
 
 
 def adjust_output(args, output, edge_index, label, train_mask, aggregator, class_num_list, epoch):
+    """
+    Adjust the margin of each labeled nodes according to local topolgy
+    Input:
+        args:               hyperparameters for TAM
+        output:             model prediction for whole nodes (include unlabeled nodes); [# of nodes, # of classes]
+        edge_index:         ; [2, # of nodes]
+        label:              ; [# of nodes]
+        train_mask:         ; [# of nodes]
+        aggregator:         function (below)
+        class_num_list:     the number of nodes for each class; [# of classes]
+        epoch:              current epoch; integer
+    Output:
+        output:             adjusted logits
+    """
+
     # Compute ACM and ADM
     if args.tam and epoch > args.warmup:
         acm, adm = compute_tam(output, edge_index, label, train_mask, aggregator, \
