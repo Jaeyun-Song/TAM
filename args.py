@@ -30,7 +30,7 @@ def parse_args():
                         help='coefficient of ACM')
     parser.add_argument('--tam_beta', type=float, default=0.5,
                         help='coefficient of ADM')
-    parser.add_argument('--temp_alpha', type=float, default=1.2,
+    parser.add_argument('--temp_phi', type=float, default=1.2,
                         help='classwise temperature')
     parser.add_argument('--warmup', type=int, default=5,
                         help='warmup')
