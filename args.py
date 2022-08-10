@@ -25,7 +25,15 @@ def parse_args():
                         help='use reweight')
     parser.add_argument('--pc_softmax', action='store_true',
                         help='use pc softmax')
-    # Hyperparameter for our approach
+    parser.add_argument('--ens', action='store_true',
+                        help='use GraphENS')
+    # Hyperparameter for GraphENS
+    parser.add_argument('--keep_prob', type=float, default=0.01,
+                        help='Keeping Probability')
+    parser.add_argument('--pred_temp', type=float, default=2,
+                        help='Prediction temperature')             
+
+    # Hyperparameter for TAM
     parser.add_argument('--tam_alpha', type=float, default=2.5,
                         help='coefficient of ACM')
     parser.add_argument('--tam_beta', type=float, default=0.5,
