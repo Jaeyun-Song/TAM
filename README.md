@@ -16,15 +16,22 @@ This is implemented mainly based on [Pytorch Geometric](https://github.com/rusty
 - Running command for TAM:
   1. Balanced Softmax + TAM
     ```
-    python main_bs.py --tam \
+    python main_bs.py \
     --loss_type bs \
     --dataset [dataset] \
     --net [net] \
     --n_layer [n_layer] \
     --feat_dim [feat_dim] \
+    --tam \
     --tam_alpha [tam_alpha] \
     --tam_beta [tam_beta] \
     --temp_phi [temp_phi] \
+    ```
+  2. GraphENS + TAM
+    ```
+    python main_ens.py --ens \
+    --loss_type ce \
+    --tam \
     ```
 
 - Running command for baselines:
@@ -48,6 +55,11 @@ This is implemented mainly based on [Pytorch Geometric](https://github.com/rusty
     python main_bs.py \
     --loss_type bs \ 
     ```
+  5. GraphENS
+    ```
+    python main_ens.py --ens \
+    --loss_type ce \ 
+    ```
 
 - Argument Description
   1. Experiment Dataset (the dataset will be downloaded automatically at the first running time):\
@@ -65,7 +77,7 @@ This is implemented mainly based on [Pytorch Geometric](https://github.com/rusty
   7. The class-wise temeperature hyperparameter, 𝜙: \
        Set [temp_phi] as one of [0.8, 1.2]
 
-We will update ReNode and GraphENS later.
+We will update ReNode later.
 
 ## Dependencies
 This code has been tested with 
