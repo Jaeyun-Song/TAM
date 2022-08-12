@@ -27,11 +27,19 @@ def parse_args():
                         help='use pc softmax')
     parser.add_argument('--ens', action='store_true',
                         help='use GraphENS')
+    parser.add_argument('--renode', action='store_true',
+                        help='use ReNode')
     # Hyperparameter for GraphENS
     parser.add_argument('--keep_prob', type=float, default=0.01,
                         help='Keeping Probability')
     parser.add_argument('--pred_temp', type=float, default=2,
                         help='Prediction temperature')             
+    # ReNode
+    parser.add_argument('--loss_name', default="re-weight", type=str, help="the training loss") #ce focal re-weight cb-softmax
+    parser.add_argument('--factor_focal', default=2.0,    type=float, help="alpha in Focal Loss")
+    parser.add_argument('--factor_cb',    default=0.9999, type=float, help="beta  in CB Loss")
+    parser.add_argument('--rn_base',    default=0.5, type=float, help="Lower bound of RN")
+    parser.add_argument('--rn_max',    default=1.5, type=float, help="Upper bound of RN")
 
     # Hyperparameter for TAM
     parser.add_argument('--tam_alpha', type=float, default=2.5,

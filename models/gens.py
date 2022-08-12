@@ -1,3 +1,7 @@
+"""
+Code Reference: https://github.com/JoonHyung-Park/GraphENS/blob/main/models/gens.py
+"""
+
 import numpy as np
 import torch
 import torch.nn as nn

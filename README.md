@@ -33,6 +33,15 @@ This is implemented mainly based on [Pytorch Geometric](https://github.com/rusty
     --loss_type ce \
     --tam \
     ```
+  3. ReNode + TAM
+    ```
+    python main_renode.py --renode \
+    --loss_type ce \
+    --loss_name [loss_name] \
+    --rn_base [rn_base] \
+    --rn_max [rn_max] \
+    --tam \
+    ```
 
 - Running command for baselines:
   1. Cross Entropy
@@ -60,8 +69,16 @@ This is implemented mainly based on [Pytorch Geometric](https://github.com/rusty
     python main_ens.py --ens \
     --loss_type ce \ 
     ```
+  6. ReNode
+    ```
+    python main_renode.py --renode \
+    --loss_type ce \
+    --loss_name [loss_name] \
+    --rn_base [rn_base] \
+    --rn_max [rn_max] \
+    ```
 
-- Argument Description
+- Argument Description for TAM
   1. Experiment Dataset (the dataset will be downloaded automatically at the first running time):\
        Set [dataset] as one of ['Cora', 'Citeseer', 'PubMed', 'chameleon', 'squirrel', 'Wisconsin']
   2. Backbone GNN architecture:\
