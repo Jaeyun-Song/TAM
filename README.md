@@ -1,5 +1,7 @@
 # TAM: Topology-Aware Margin Loss for Class-Imbalanced Node Classification
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10021511.svg)](https://doi.org/10.5281/zenodo.10021511)
+
 ## Introduction
 
 Official Pytorch implementation of ICML 2022 paper "[TAM: Topology-Aware Margin Loss for Class-Imbalanced Node Classification](https://proceedings.mlr.press/v162/song22a)"
@@ -118,3 +120,7 @@ This code has been tested with
 }
 
 ```
+
+## Acknowledgement
+This work was supported by Institute of Information & communications Technology Planning & Evaluation (IITP) grant funded by the Korea government(MSIT) 
+(No.2019-0-00075, Artificial Intelligence Graduate School Program(KAIST))
